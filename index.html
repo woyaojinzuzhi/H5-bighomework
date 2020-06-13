@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        body{
+            background-color: rgb(221, 221, 221);
+        }
+        @media screen and (max-width: 768px){
+            body{
+                background-color: white;
+            }
+        }
+        /* 顶部黑条 */
+        .on-top{
+            width: 100%;
+        }
+        .top{
+            background-color: rgb(40, 40, 40);
+            height: 35px;
+            color: white;
+        }
+        .top img{
+            position: absolute;
+            right: 375px;
+            top: 5px;
+        }
+        .tellphone{
+            position: absolute;
+            right: 265px;
+            top: 6px;
+            font-size: 16px;
+        }
+        .login{
+            position: absolute;
+            right: 116px;
+            top: 6px;
+            color: rgb(173, 173, 173);
+        }
+        .login a{
+            text-decoration: none;
+            color: rgb(173, 173, 173);
+            position: relative;
+            top: 2px;
+        }
+        @media screen and (max-width: 768px){
+            .top{
+                display: none;
+            }
+        }
+        /* 顶部nav */
+        .top-1{
+            width: 100%;
+            margin-bottom: -16px;
+        }
+        .nav-1{
+            background-color: white;
+            border: 1px solid white;
+            border-radius: 0px;
+            height: 80px;
+        }
+        .coo{
+            border: 1px solid white;
+            position: relative;
+            top: 10px;
+            right: 8px;
+        }
+        .but{
+            display: none;
+        }
+        .nav-1 img{
+            position: absolute;
+            left: 100px;
+            top: 10px;
+        }
+        .nav-2 li{
+            position: relative;
+            left: 350px;
+            top: 15px;
+            font-size: 20px;
+            margin: 0 20px;
+        }
+        .nav-2 li a{
+            text-decoration: none;
+            color: black;
+        }
+        #active{
+            color: rgb(203, 84, 5);
+            border-bottom: 4px solid rgb(203, 84, 5);
+        }
+        @media screen and (max-width: 768px){
+            .nav-1{
+                background-color: white;
+                border: 1px solid white;
+                border-radius: 5px;
+            }
+            .nav-1 img{
+                position: absolute;
+                left: 20px;
+            }
+            .but{
+                display: block;
+                width: 80px;
+                height: 30px;
+                background-color: rgb(203, 84, 5);
+                position: absolute;
+                right: 95px;
+                top: 20px;
+                border-radius: 5px;
+            }
+            .but a{
+                line-height: 30px;
+                text-decoration: none;
+                color: white;
+            }
+            .nav-2 li{
+                position: relative;
+                left: 0px;
+                top: 0px;
+            }
+            .nav-2 li a{
+                text-decoration: none;
+                color: rgb(203, 84, 5);
+            }
+        }
+        .collapse{
+            background-color: white;
+        }
+
+        /* banner */
+        .banner img{
+            margin: 0 auto;
+            width: 100%;
+        }
+        .banner h1{
+            position: absolute;
+            left: 200px;
+            top: 195px;
+            color: rgba(255, 255, 255, 0.74);
+        }
+        .banner-p1{
+            position: absolute;
+            top: 285px;
+            left: 200px;
+            color: rgba(255, 255, 255, 0.74);
+            border-top: 1px solid rgba(168, 168, 168, 0.589);
+            padding-top: 10px;
+        }
+        .banner-p2{
+            position: absolute;
+            top: 325px;
+            left: 200px;
+            color: rgba(255, 255, 255, 0.74);
+            border-bottom: 1px solid rgba(168, 168, 168, 0.589);
+            padding-bottom: 10px;
+        }
+        .banner-p3{
+            display: none;
+        }
+        @media screen and (max-width: 768px){
+            .banner h1{
+                font-size: 16px;
+                position: absolute;
+                left: 40px;
+                top: 80px;
+            }
+            .banner-p3{
+                font-size: 10px;
+                position: absolute;
+                left: 40px;
+                top: 128px;
+                color: rgba(255, 255, 255, 0.74);
+                display: block;
+            }
+            .banner-p1{
+                display: none;
+            }
+            .banner-p2{
+                display: none;
+            }
+        }
+
+        .ser-big{
+            position: relative;
+            top: -150px;
+            left: 430px;
+            width: 630px;
+            height: 60px;
+            background-color: white;
+            border: 4px solid rgba(0, 0, 0, 0.692);
+            border-radius: 5px;
+        }
+        .ser-small{
+            width: 140px;
+            height: 52px;
+            background-color: rgb(211, 211, 216);
+            position: absolute;
+        }
+        .ser-small img{
+            width: 24px;
+            height: 30px;
+            position: absolute;
+            left: 20px;
+            top: 10px;
+        }
+        .ser-small p{
+            position: absolute;
+            left: 60px;
+            top: 15px;
+            font-size: 16px;
+            color: rgb(109, 109, 109);
+        }
+        .ser-in{
+            position: relative;
+            top: 0px;
+            left: 160px;
+            width: 300px;
+            height: 52px;
+            border: 1px;
+        }
+        .ser-ser{
+            width: 140px;
+            height: 52px;
+            background-color: rgb(203, 84, 5);
+            position: absolute;
+            right: 0px;
+            top: 0px;
+        }
+        .ser-ser img{
+            position: absolute;
+            left: 55px;
+            top: 8px;
+            width: 36px;
+            height: 36px;
+        }
+        @media screen and (max-width: 768px){
+            .ser-big{
+                position: relative;
+                top: -100px;
+                left: 50px;
+                width: 550px;
+                height: 60px;
+            }
+            .ser-in{
+                width: 300px;
+            }
+            .ser-ser{
+                position: absolute;
+                right: 0px;
+                top: 0px;
+                width: 70px;
+                height: 52px;
+            }
+            .ser-ser img{
+                position: absolute;
+                left: 20px;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container on-top">
+        <div class="row">
+            <div class="col-md-12 top">
+                <img class="img-responsive" src="img/tell.png">
+                <p class="tellphone">400-808-8682</p>
+                <p class="login">
+                    <a class="login-1" href="#">请登录</a>&nbsp;&nbsp;
+                    |&nbsp;&nbsp;
+                    <a class="login-2" href="#">注册</a>
+                </p>
+            </div>
+            <div class="col-md-12 col-xs-12 top-1">
+                <nav class="navbar nav-1 navbar-default">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle coo" data-toggle="collapse" data-target="#col-1">
+                                <span class="sr-only">导航开关</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a href="#"><img src="img/logo.png" class="img-responsive"></a>
+                            <div class="but text-center"><a href="#">快速定制</a></div>
+                        </div>
+                        <div class="collapse navbar-collapse" id="col-1">
+                            <ul class="nav navbar-nav nav-2">
+                                <li><a id="active" href="#">首页</a></li>
+                                <li><a href="#">热门路线</a></li>
+                                <li><a href="#">签证推荐</a></li>
+                                <li><a href="#">使命愿景</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div class="banner">
+                <h1>
+                    悠游古欧洲 &nbsp;&nbsp; 遍览德法瑞意
+                </h1>
+                <p class="banner-p1">
+                    巴黎卢浮宫、塞纳河游船、凡尔赛宫
+                </p>
+                <p class="banner-p2">
+                    少女峰、大运河游船、金色列车，西庸城堡
+                </p>
+                <p class="banner-p3">
+                    全程升级热早+1晚5星酒店
+                </p>
+                <img src="img/banner.jpg" class="img-responsive">
+                <div class="ser-big">
+                    <div class="ser-small">
+                        <img src="img/position.png" class="img-responsive">
+                        <p>目的地</p>
+                    </div>
+                    <form action="">
+                        <input type="text" class="form-control ser-in" placeholder="|  日本       美国        英国        地中海"/>
+                    </form>
+                    <div class="ser-ser">
+                        <a href="#"><img src="img/search.png"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</html>
